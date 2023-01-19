@@ -1,23 +1,23 @@
 # soundDriverWindowsMBP2012
 
 
-`c: & cd \dsdt
-set 64bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify\asl.exe"
-set 32bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\asl.exe"
-copy /y %32bit_OS_asl% c:\dsdt > nul & copy /y %64bit_OS_asl% c:\dsdt > nul
-if not exist c:\dsdt\asl.exe echo ERROR: Failed to copy asl.exe to c:\dsdt
-acpidump -b -z
-asl /u dsdt.dat
-copy dsdt.asl dsdt-modified.asl
-iasl -da -dl -fe refs.txt dsdt.dat
-copy dsdt.dsl dsdt-modified.dsl
-iasl -ve dsdt-modified.dsl
-asl /Fo=dsdt-modified.aml dsdt-modified.asl
-asl /loadtable dsdt-modified.aml  
-bcdedit -set TESTSIGNING ON`
+`c: & cd \dsdt`<br />
+`set 64bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify\asl.exe"`<br />
+`set 32bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\asl.exe"`<br />
+`copy /y %32bit_OS_asl% c:\dsdt > nul & copy /y %64bit_OS_asl% c:\dsdt > nul`<br />
+`if not exist c:\dsdt\asl.exe echo ERROR: Failed to copy asl.exe to c:\dsdt`<br />
+`acpidump -b -z`<br />
+`asl /u dsdt.dat`<br />
+`copy dsdt.asl dsdt-modified.asl`<br />
+`iasl -da -dl -fe refs.txt dsdt.dat`<br />
+// copy dsdt.dsl dsdt-modified.dsl<br />
+`iasl -ve dsdt-modified.dsl`<br />
+`asl /Fo=dsdt-modified.aml dsdt-modified.asl`<br />
+`asl /loadtable dsdt-modified.aml`<br />
+`bcdedit -set TESTSIGNING ON``<br />
 
 REFERENCE:::::
-
+https://egpu.io/forums/pc-setup/fix-dsdt-override-to-correct-error-12/?foro=signin
 eGPU.io
 MENU
 Setup & Software DiscussionsThunderbolt Windows eGPU[GUIDE] DSDT override eGPU error 12 fix 
