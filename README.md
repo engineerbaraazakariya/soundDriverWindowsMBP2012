@@ -14,7 +14,7 @@
 `iasl -ve dsdt-modified.dsl`<br />
 `asl /Fo=dsdt-modified.aml dsdt-modified.asl`<br />
 `asl /loadtable dsdt-modified.aml`<br />
-`bcdedit -set TESTSIGNING ON``<br />
+`bcdedit -set TESTSIGNING ON`<br />
 
 REFERENCE:::::
 https://egpu.io/forums/pc-setup/fix-dsdt-override-to-correct-error-12/?foro=signin
