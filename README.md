@@ -1,6 +1,17 @@
-# soundDriverWindowsMBP2012
-
-
+# Sound Driver Fix For Windows MBP 2012 and before
+<br />
+Pre-Requirements:<br />
+1- Download and Install MS Windows SDK (https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) <br />
+2- MS Windows WDK (https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)<br />
+3- Python (https://www.python.org/downloads/windows/) ( tested on V3 )<br />
+<br />
+Steps:<br />
+1- Get this repo to a folder<br />
+2- Run CMD as Admin<br />
+3- Run `python dsdt.py`<br />
+4- Restart Your Computer.<br />
+<br />
+Detailed Log:<br />
 `c: & cd \dsdt`<br />
 `set 64bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify\asl.exe"`<br />
 `set 32bit_OS_asl="C:\Program Files (x86)\Windows Kits\10\Tools\x86\ACPIVerify\asl.exe"`<br />
@@ -10,7 +21,7 @@
 `asl /u dsdt.dat`<br />
 `copy dsdt.asl dsdt-modified.asl`<br />
 `iasl -da -dl -fe refs.txt dsdt.dat`<br />
-// copy dsdt.dsl dsdt-modified.dsl<br />
+`copy dsdt.dsl dsdt-modified.dsl`<br />
 `iasl -ve dsdt-modified.dsl`<br />
 `asl /Fo=dsdt-modified.aml dsdt-modified.asl`<br />
 `asl /loadtable dsdt-modified.aml`<br />
