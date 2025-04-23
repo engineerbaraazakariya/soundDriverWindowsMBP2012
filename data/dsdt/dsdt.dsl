@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of dsdt.dat, Wed Apr 23 13:49:17 2025
+ * Disassembly of dsdt.dat, Wed Apr 23 13:56:23 2025
  *
  * Original Table Header:
  *     Signature        "DSDT"
