@@ -1,9 +1,7 @@
 # Sound Driver Fix For Windows MBP 2012 and before
 <br />
 Pre-Requirements:<br />
-1- Download and Install MS Windows SDK (https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/) <br />
-2- MS Windows WDK (https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)<br />
-3- Python (https://www.python.org/downloads/windows/) ( tested on V3 )<br />
+Only Python (https://www.python.org/downloads/windows/) ( tested on V3 )<br />
 <br />
 Steps:<br />
 1- Get this repo to a folder<br />
