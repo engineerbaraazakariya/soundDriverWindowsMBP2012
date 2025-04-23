@@ -6,7 +6,7 @@ Only Python (https://www.python.org/downloads/windows/) ( tested on V3 )<br />
 Steps:<br />
 1- Get this repo to a folder<br />
 2- Run CMD as Admin<br />
-3- Run `python dsdt.py`<br />
+3- Run `python fix_sound_card_driver_win10_mbp2012.py`<br />
 4- Restart Your Computer.<br />
 <br />
 Detailed Log:<br />
